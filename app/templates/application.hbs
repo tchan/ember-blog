@@ -1,5 +1,7 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<h1>My Blog</h1>
+<div class="new-post">
+  <h2>New post</h2>
+  {{textarea value=title cols="60" rows="1"}}
+  {{textarea value=post cols="60" rows="5"}}
+  <button class="pull-right">Create</button>
+</div>

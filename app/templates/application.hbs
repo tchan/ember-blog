@@ -1,7 +1,16 @@
 <h1>My Blog</h1>
+{{log 'model' model}}
 <div class="new-post">
   <h2>New post</h2>
   {{textarea value=title cols="60" rows="1"}}
   {{textarea value=post cols="60" rows="5"}}
-  <button class="pull-right">Create</button>
+  <button class="pull-right" {{action 'publishNewPost'}}>Create</button>
 </div>
+
+
+{{#each model as |post|}}
+  <div>
+    {{textarea value=post.title cols="60" rows="1"}}
+    {{textarea value=post.body cols="60" rows="5"}}
+  </div>
+{{/each}}

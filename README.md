@@ -1,4 +1,4 @@
-# blog
+# Ember Simple Blog
 
 A simple blog made with Ember. It's more of a post it note to yourself than anything. Comments are saved to a firebase database and can be deleted.
 

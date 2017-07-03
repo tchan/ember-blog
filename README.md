@@ -4,6 +4,10 @@ A simple blog made with Ember. It's more of a post it note to yourself than anyt
 
 <img src="https://github.com/tchan/ember-blog/blob/master/demo.png" width=50% height=50%>
 
+## Demo
+
+http://ember-simple-blog.surge.sh
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.

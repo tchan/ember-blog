@@ -1,5 +1,4 @@
 import Ember from 'ember';
-const { get } = Ember;
 export default Ember.Controller.extend({
   title: null,
   post: null,
@@ -12,6 +11,10 @@ export default Ember.Controller.extend({
       }).save();
       Ember.set(this, 'title', '');
       Ember.set(this, 'post', '');
+    },
+
+    deletePost(post) {
+      post.destroyRecord();
     }
   }
 

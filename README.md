@@ -2,7 +2,7 @@
 
 A simple blog made with Ember. It's more of a post it note to yourself than anything. Comments are saved to a firebase database and can be deleted.
 
-![Demo](/demo.png?raw=true "demo")
+![Demo](/demo.png?raw=true "demo" =250x250)
 
 ## Prerequisites
 

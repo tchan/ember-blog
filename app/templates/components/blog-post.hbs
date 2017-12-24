@@ -1,0 +1,20 @@
+  <div class="new-post">
+    <h1>{{post.title}}</h1>
+    <p>{{post.body}}</p>
+    <p>- {{post.author}}</p>
+    <div class="button-container">
+      {{#if isEditing}}
+        <div class="left">
+          <button class="left" {{action 'deletePost' post}}>Save</button>
+        </div>
+        <div class="right">
+          <button class="right-item" {{action 'deletePost' post}}>Cancel</button>
+          <button class="right-item" {{action 'deletePost' post}}>Delete</button>
+        </div>
+      {{else}}
+      <div class="right">
+        <button class="right-item" {{action 'editPost' post}}>Edit</button>
+      </div>
+      {{/if}}
+    </div>
+  </div>

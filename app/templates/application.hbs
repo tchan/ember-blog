@@ -5,15 +5,10 @@
   {{textarea value=author cols="60" rows="1" placeholder="Author"}}
   {{textarea value=title cols="60" rows="1" placeholder="Title"}}
   {{textarea value=post cols="60" rows="5" placeholder="Body post"}}
-  <button class="pull-right" {{action 'publishNewPost'}}>Create</button>
+  <button class="right" {{action 'publishNewPost'}}>Create</button>
 </div>
 
 
 {{#each model as |post|}}
-  <div class="new-post">
-    <h1>{{post.title}}</h1>
-    <p>{{post.body}}</p>
-    <p>- {{post.author}}</p>
-    <button class="pull-right" {{action 'deletePost' post}}>Delete</button>
-  </div>
+  {{blog-post post=post}}
 {{/each}}

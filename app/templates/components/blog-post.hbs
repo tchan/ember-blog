@@ -1,20 +1,25 @@
   <div class="new-post">
-    <h1>{{post.title}}</h1>
-    <p>{{post.body}}</p>
-    <p>- {{post.author}}</p>
-    <div class="button-container">
       {{#if isEditing}}
-        <div class="left">
-          <button class="left" {{action 'deletePost' post}}>Save</button>
-        </div>
-        <div class="right">
-          <button class="right-item" {{action 'deletePost' post}}>Cancel</button>
-          <button class="right-item" {{action 'deletePost' post}}>Delete</button>
+        {{textarea value=post.title cols="60" rows="1" placeholder="Title"}}
+        {{textarea value=post.body cols="60" rows="5" placeholder="Body post"}}
+        <p>- {{post.author}}</p>
+        <div class="button-container">
+          <div class="left">
+            <button class="left" {{action 'savePost' post}}>Save</button>
+          </div>
+          <div class="right">
+            <button class="right-item" {{action 'cancelEdit' post}}>Cancel</button>
+            <button class="right-item" {{action 'deletePost' post}}>Delete</button>
+          </div>
         </div>
       {{else}}
-      <div class="right">
-        <button class="right-item" {{action 'editPost' post}}>Edit</button>
-      </div>
+        <h1>{{post.title}}</h1>
+        <p>{{post.body}}</p>
+        <p>- {{post.author}}</p>
+        <div class="button-container">
+          <div class="right">
+            <button class="right-item" {{action 'editPost'}}>Edit</button>
+          </div>
+        </div>
       {{/if}}
-    </div>
   </div>

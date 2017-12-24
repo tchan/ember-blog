@@ -7,9 +7,17 @@ export default Ember.Component.extend({
     deletePost(post) {
       post.destroyRecord();
     },
-
-    editPost(post) {
+    cancelEdit(post) {
+      post.rollbackAttributes();
+      this.set('isEditing', false);
+    },
+    editPost() {
       this.set('isEditing', true);
+    },
+    savePost(post) {
+      post.save().then(() => {
+        this.set('isEditing', false);
+      });
     }
   }
 

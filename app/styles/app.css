@@ -13,10 +13,18 @@ body {
 }
 
 .post {
+  max-width: 400px;
   background-color: white;
   border: 1px solid #BBB;
   padding: 0 10px;
   margin-top: 30px;
+}
+
+.blog-comment {
+  width: 420px;
+  height: 35px;
+  background-color: #E9EBEE;
+  border: 1px solid #BBB;
 }
 
 .button-container {

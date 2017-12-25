@@ -1,4 +1,4 @@
-  <div class="new-post">
+  <div class="post">
       {{#if isEditing}}
         {{textarea value=post.title cols="60" rows="1" placeholder="Title"}}
         {{textarea value=post.body cols="60" rows="5" placeholder="Body post"}}
@@ -22,4 +22,19 @@
           </div>
         </div>
       {{/if}}
+  </div>
+  <div class="blog-comment">
+    {{#if hasComments}}
+      {{hasComments}} {{hasCommentsText}}. <a href=# {{action 'showCommentTextArea'}}>Join the conversation!</a>
+    {{else}}
+      No comments yet. <a href=# {{action 'showCommentTextArea'}}>Be the first!</a>
+    {{/if}}
+    {{#if showCommentTextArea}}
+      {{#each post.comments as |comment|}}
+        <br>
+        {{comment.message}}
+      {{/each}}
+      {{textarea value=comment cols="60" rows="1" placeholder="Leave a comment"}}
+      <button class="right-item" {{action 'saveComment' comment post}}>Save</button>
+    {{/if}}
   </div>
